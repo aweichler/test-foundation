@@ -1,11 +1,3 @@
-doctrine:
-    dbal:
-        connections:
-            default:
-                # Every test runs inside a transaction that is rolled back afterwards, and a test
-                # that opens one of its own needs a savepoint rather than a second transaction.
-                use_savepoints: true
-
 framework:
     messenger:
         # A test that commits would leave its messages in the database, and every later run would work them off.
