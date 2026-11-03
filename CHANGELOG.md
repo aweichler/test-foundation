@@ -5,6 +5,9 @@
 - [CHORE] The test connection no longer sets `use_savepoints`, which DoctrineBundle 3 removed because DBAL 4 always uses savepoints
 - [CHORE] The test application no longer maps enum columns to strings, because DBAL 4 has its own enum type
 
+## 1.2.9
+- [BUGFIX] A request through `Container::testClient()` is the main request, so OpenDXP reads its locale
+
 ## 1.2.8
 - [NEW FEATURE] `Concurrency::run()` tests race conditions with closures in parallel processes. See [Concurrency](README.md#concurrency)
 - [NEW FEATURE] `WithoutRollbackTestCase` restores a database snapshot instead of rolling back. See [Tests without rollback](README.md#tests-without-rollback)
