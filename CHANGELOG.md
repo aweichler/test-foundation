@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+- [CHORE] The test foundation runs on Symfony 8.1 and PHP 8.6. It requires PHP >= 8.4.1, the minimum of Symfony 8.1, and Doctrine DBAL 4
+- [CHORE] The test connection no longer sets `use_savepoints`, which DoctrineBundle 3 removed because DBAL 4 always uses savepoints
+- [CHORE] The test application no longer maps enum columns to strings, because DBAL 4 has its own enum type
+
 ## 1.2.8
 - [NEW FEATURE] `Concurrency::run()` tests race conditions with closures in parallel processes. See [Concurrency](README.md#concurrency)
 - [NEW FEATURE] `WithoutRollbackTestCase` restores a database snapshot instead of rolling back. See [Tests without rollback](README.md#tests-without-rollback)
